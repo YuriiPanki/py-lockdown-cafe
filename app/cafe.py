@@ -21,7 +21,7 @@ class Cafe:
                 f"{visitor['name']} does have expired vaccine"
             )
 
-        if not (visitor["wearing_a_mask"] or visitor.get("wearing_a_mask", 0)):
+        if not visitor.get("wearing_a_mask", 0):
             raise NotWearingMaskError(
                 f"{visitor['name']} doesn't have wearing mask"
             )
